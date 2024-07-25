@@ -31,6 +31,7 @@ from .internlm import InternLMPipeline
 from .openassistant import *  # noqa
 from .openbmb import LlamaRewardModel, OpenBMBPipeline
 from .pairrm import DebertaV2PairRM, PairRMPipeline
+from .pairrm_v2 import PairRMV2Pipeline
 from .pipeline import RewardBenchPipeline
 from .shp import SHPPipeline
 from .slicpairpm import SlicPairPMPipeline
@@ -77,6 +78,13 @@ REWARD_MODEL_CONFIG = {
         "quantized": True,
         "custom_dialogue": False,
         "model_type": "Seq. Classifier",
+    },
+    "DongfuJiang/PairRM-V2-phi3-3-mini-checkpoint-800": {
+        "model_builder": AutoModelForCausalLM.from_pretrained,
+        "pipeline_builder": PairRMV2Pipeline,
+        "quantized": True,
+        "custom_dialogue": True,
+        "model_type": "Custom Classifier",
     },
     "llm-blender/PairRM-hf": {
         "model_builder": DebertaV2PairRM.from_pretrained,

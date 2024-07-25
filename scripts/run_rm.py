@@ -115,8 +115,13 @@ def main():
     chat_template = args.chat_template
     conv = get_conv_template(chat_template)
 
-    if args.model in REWARD_MODEL_CONFIG:
-        config = REWARD_MODEL_CONFIG[args.model]
+    config = None
+    for key in REWARD_MODEL_CONFIG:
+        if key == "default":
+            continue
+        if key in args.model:
+            config = REWARD_MODEL_CONFIG[key]
+            break
     else:
         config = REWARD_MODEL_CONFIG["default"]
     logger.info(f"Using reward model config: {config}")
