@@ -79,7 +79,7 @@ REWARD_MODEL_CONFIG = {
         "custom_dialogue": False,
         "model_type": "Seq. Classifier",
     },
-    "DongfuJiang/PairRM-V2-phi3-3-mini-checkpoint-800": {
+    "DongfuJiang/PairRM-V2-phi3-3-mini": {
         "model_builder": AutoModelForCausalLM.from_pretrained,
         "pipeline_builder": PairRMV2Pipeline,
         "quantized": True,

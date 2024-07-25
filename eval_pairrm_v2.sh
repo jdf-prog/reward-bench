@@ -6,4 +6,3 @@ CUDA_VISIBLE_DEVICES=4 python scripts/run_rm.py --model "DongfuJiang/PairRM-V2-p
 CUDA_VISIBLE_DEVICES=5 python scripts/run_rm.py --model "DongfuJiang/PairRM-V2-phi3-3-mini-checkpoint-2400" --trust_remote_code --batch_size=4 &
 CUDA_VISIBLE_DEVICES=6 python scripts/run_rm.py --model "DongfuJiang/PairRM-V2-phi3-3-mini-checkpoint-2800" --trust_remote_code --batch_size=4 &
 CUDA_VISIBLE_DEVICES=7 python scripts/run_rm.py --model "DongfuJiang/PairRM-V2-phi3-3-mini-checkpoint-2882" --trust_remote_code --batch_size=4 &
-wait
